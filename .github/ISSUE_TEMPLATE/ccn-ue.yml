@@ -1,5 +1,5 @@
 name: "CCN UE: problem or crash"
-description: Something went wrong in Commands & Colors: Napoleonics - UE. The module's Report button fills most of this in for you.
+description: "Something went wrong in Commands & Colors: Napoleonics - UE. The module's Report button fills most of this in for you."
 title: "[CCN UE] "
 labels: ["ccn-ue", "bug", "needs-triage"]
 body:
