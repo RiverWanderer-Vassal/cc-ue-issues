@@ -1,0 +1,22 @@
+name: Rules question or request
+description: A rule you think the module plays wrongly, or something you would like added or changed.
+labels: ["request", "needs-triage"]
+body:
+  - type: dropdown
+    id: module
+    attributes:
+      label: Module
+      options:
+        - Commands & Colors: Napoleonics - UE
+        - Commands & Colors: Ancients - UE
+        - Commands & Colors: Medieval - UE
+        - Commands & Colors: Samurai Battles - UE
+    validations:
+      required: true
+  - type: textarea
+    id: request
+    attributes:
+      label: What would you like?
+      description: For a rules point, quote the rule book, card or FAQ, and attach a game log or save showing it.
+    validations:
+      required: true

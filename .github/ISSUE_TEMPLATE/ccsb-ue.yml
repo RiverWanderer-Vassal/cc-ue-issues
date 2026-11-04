@@ -1,0 +1,48 @@
+name: "CCSB UE: problem or crash"
+description: Something went wrong in Commands & Colors: Samurai Battles - UE. The module's Report button fills most of this in for you.
+title: "[CCSB UE] "
+labels: ["ccsb-ue", "bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Please **attach the game log** (drag the `.vlog` file named below into the "Files" box):
+        the module replays it exactly, which is usually all it takes to find the fault.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What you did, what you expected, and what the module did instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: If you can make it happen again, how?
+  - type: input
+    id: scenario
+    attributes:
+      label: Scenario
+      placeholder: e.g. Dara - 530 AD
+  - type: textarea
+    id: environment
+    attributes:
+      label: Module, VASSAL and computer
+      description: Filled in by the Report button; otherwise the module version (Help > About), VASSAL version and operating system.
+  - type: textarea
+    id: game-state
+    attributes:
+      label: Game state
+      description: Filled in by the Report button.
+  - type: textarea
+    id: files
+    attributes:
+      label: Files
+      description: Drag the game log (`.vlog`, from Documents/CCSBUE Logs or as named by the module) and any screenshots here.
+  - type: textarea
+    id: error
+    attributes:
+      label: Error details
+      description: Filled in by the Report button.
+      render: text

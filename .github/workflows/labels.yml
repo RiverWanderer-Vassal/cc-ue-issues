@@ -1,0 +1,29 @@
+name: Labels
+on:
+  push:
+    branches: [main]
+    paths: [".github/workflows/labels.yml"]
+  workflow_dispatch:
+permissions:
+  issues: write
+jobs:
+  labels:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create or update labels
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          gh label create "ccn-ue" --color "1f4e9c" --description "Problem in Commands & Colors: Napoleonics - UE" --force
+          gh label create "cca-ue" --color "8c5a2b" --description "Problem in Commands & Colors: Ancients - UE" --force
+          gh label create "ccm-ue" --color "6b3fa0" --description "Problem in Commands & Colors: Medieval - UE" --force
+          gh label create "ccsb-ue" --color "b0302a" --description "Problem in Commands & Colors: Samurai Battles - UE" --force
+          gh label create "bug" --color "d73a4a" --description "Something is not working" --force
+          gh label create "request" --color "a2eeef" --description "Rules question, feature or change request" --force
+          gh label create "needs-triage" --color "fbca04" --description "New: not yet looked at" --force
+          gh label create "confirmed" --color "0e8a16" --description "Reproduced; moved to (or fixed in) the module's code repository" --force
+          gh label create "vassal-engine" --color "5319e7" --description "A fault in VASSAL itself: forwarded to vassalengine/vassal" --force
+          gh label create "rules" --color "c5def5" --description "Rules interpretation" --force
+          gh label create "duplicate" --color "cfd3d7" --description "Already reported" --force
+          gh label create "not-a-bug" --color "ffffff" --description "Works as the rules say" --force
