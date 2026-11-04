@@ -1,0 +1,47 @@
+name: Triage
+# First look at every problem report: checks that the module's prepared files are attached and, if not,
+# asks once for them (label "needs-files"). The label comes off when files appear in the report or in a comment.
+# Runs on GitHub's own token (no bot account), so it works for every reporter, Claude account or not.
+on:
+  issues:
+    types: [opened, edited]
+  issue_comment:
+    types: [created]
+permissions:
+  issues: write
+jobs:
+  files:
+    if: contains(github.event.issue.labels.*.name, 'bug') && !github.event.issue.pull_request
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const issue = context.payload.issue;
+            const labels = issue.labels.map(l => l.name);
+            const req = { owner: context.repo.owner, repo: context.repo.repo, issue_number: issue.number };
+            // An uploaded file or any linked .zip/.vlog/.vsav counts.
+            const files = t => /user-attachments\/files\/|\.(zip|vlog|vsav)\b/i.test(t || "");
+            const comment = context.payload.comment;
+            if (comment) {
+              // A comment only clears the request; it never makes one.
+              if (labels.includes("needs-files") && files(comment.body)) {
+                await github.rest.issues.removeLabel({ ...req, name: "needs-files" });
+              }
+              return;
+            }
+            if (files(issue.body)) {
+              if (labels.includes("needs-files")) await github.rest.issues.removeLabel({ ...req, name: "needs-files" });
+              return;
+            }
+            if (labels.includes("needs-files") || context.payload.action !== "opened") return;   // ask once, on opening
+            await github.rest.issues.addLabels({ ...req, labels: ["needs-files"] });
+            await github.rest.issues.createComment({ ...req, body: [
+              "Thanks for the report. There's no game file attached yet, and it's usually what finds the fault.",
+              "",
+              "In the module, **Help › Report an issue (GitHub)…** prepares the files and opens their folder. Please drag the",
+              "`… game files.zip` (game log and saved game) into a comment here, with any screenshots. If you saved the game",
+              "yourself, zip the `.vlog`/`.vsav` first: GitHub doesn't accept those file types on their own.",
+              "",
+              "The *needs-files* label comes off by itself once a file is attached."
+            ].join("\n") });

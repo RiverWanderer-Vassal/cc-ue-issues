@@ -28,5 +28,23 @@ repositories: [ccnapoleonics](https://github.com/RiverWanderer-Vassal/ccnapoleon
 
 Rules questions and requests use the *Rules question or request* form. Please quote the rule book, card or FAQ.
 
+A report without the game files gets the **needs-files** label and a note asking for them; the label comes off by
+itself once a file is attached.
+
+## Forwarding a VASSAL fault
+When triage shows the fault is in VASSAL itself, not the module:
+1. Reproduce it in the smallest case possible, ideally without the UE module's custom code.
+2. Open an issue at [vassalengine/vassal](https://github.com/vassalengine/vassal/issues) with the VASSAL version,
+   operating system and Java version, the steps, and the minimal example (log or saved game).
+3. Link it here, label this issue **vassal-engine**, and keep it open until VASSAL has a fix or a workaround.
+
+<!-- >>> cc-ue-core workflow (synced by cc-ue-core tools/align-repo.sh) -->
+## Workflow
+Changes to this repository follow the UE git workflow in `RiverWanderer-Vassal/cc-ue-core` `docs/workflow.md` (a branch and pull request per change, squash-merged). This repository holds issues and forms only: no code.
+<!-- <<< cc-ue-core workflow -->
+
 ---
-Commands & Colors is a trademark of GMT Games, LLC. These modules are unofficial and not endorsed by GMT Games.
+Commands & Colors: Napoleonics, Ancients, Medieval and Samurai Battles are designed by Richard Borg and published by
+GMT Games, LLC; game material © GMT Games, LLC, used under GMT's terms for electronic versions. The UE modules are
+unofficial: not GMT products and not endorsed by GMT Games or Richard Borg. Modules © 2026 Mark Benson, all rights
+reserved.
