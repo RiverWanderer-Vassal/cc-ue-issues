@@ -15,10 +15,10 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
         run: |
-          gh label create "ccn-ue" --color "1f4e9c" --description "Problem in Commands & Colors: Napoleonics - UE" --force
-          gh label create "cca-ue" --color "8c5a2b" --description "Problem in Commands & Colors: Ancients - UE" --force
-          gh label create "ccm-ue" --color "6b3fa0" --description "Problem in Commands & Colors: Medieval - UE" --force
-          gh label create "ccsb-ue" --color "b0302a" --description "Problem in Commands & Colors: Samurai Battles - UE" --force
+          gh label create "ccn-ue" --color "1f4e9c" --description "Problem in Commands & Colors: Napoleonics UE" --force
+          gh label create "cca-ue" --color "8c5a2b" --description "Problem in Commands & Colors: Ancients UE" --force
+          gh label create "ccm-ue" --color "6b3fa0" --description "Problem in Commands & Colors: Medieval UE" --force
+          gh label create "ccsb-ue" --color "b0302a" --description "Problem in Commands & Colors: Samurai Battles UE" --force
           gh label create "bug" --color "d73a4a" --description "Something is not working" --force
           gh label create "request" --color "a2eeef" --description "Rules question, feature or change request" --force
           gh label create "needs-triage" --color "fbca04" --description "New: not yet looked at" --force
