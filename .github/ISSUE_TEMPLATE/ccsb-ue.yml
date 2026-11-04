@@ -1,5 +1,5 @@
 name: "CCSB UE: problem or crash"
-description: Something went wrong in Commands & Colors: Samurai Battles - UE. The module's Report button fills most of this in for you.
+description: "Something went wrong in Commands & Colors: Samurai Battles - UE. The module's Report button fills most of this in for you."
 title: "[CCSB UE] "
 labels: ["ccsb-ue", "bug", "needs-triage"]
 body:

@@ -1,5 +1,5 @@
 name: "CCA UE: problem or crash"
-description: Something went wrong in Commands & Colors: Ancients - UE. The module's Report button fills most of this in for you.
+description: "Something went wrong in Commands & Colors: Ancients - UE. The module's Report button fills most of this in for you."
 title: "[CCA UE] "
 labels: ["cca-ue", "bug", "needs-triage"]
 body:
