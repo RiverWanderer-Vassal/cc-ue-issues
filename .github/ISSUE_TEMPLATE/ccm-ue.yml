@@ -1,13 +1,13 @@
 name: "CCM UE: problem or crash"
-description: "Something went wrong in Commands & Colors: Medieval - UE. The module's Report button fills most of this in for you."
+description: "Something went wrong in Commands & Colors: Medieval UE. The module's Report button fills most of this in for you."
 title: "[CCM UE] "
 labels: ["ccm-ue", "bug", "needs-triage"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for reporting. Please **attach the game log** (drag the `.vlog` file named below into the "Files" box):
-        the module replays it exactly, which is usually all it takes to find the fault.
+        Thanks for reporting. Please **attach the files** the module prepared (listed in the Files box below): the game log
+        replays the game exactly, which is usually all it takes to find the fault.
   - type: textarea
     id: what-happened
     attributes:
@@ -39,7 +39,7 @@ body:
     id: files
     attributes:
       label: Files
-      description: Drag the game log (`.vlog`, from Documents/CCMUE Logs or as named by the module) and any screenshots here.
+      description: "Help › Report an issue (GitHub)… in the module prepares the files and opens their folder: drag them in here (the zip holds the game log and saved game; screenshots go in as they are). Otherwise drag in your .vlog/.vsav inside a .zip, and any screenshots."
   - type: textarea
     id: error
     attributes:

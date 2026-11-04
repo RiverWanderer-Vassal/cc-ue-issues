@@ -3,10 +3,10 @@
 This is where to report problems with the **Ultimate Edition (UE)** VASSAL modules for GMT Games' Commands & Colors
 series:
 
-- Commands & Colors: Napoleonics - UE
-- Commands & Colors: Ancients - UE
-- Commands & Colors: Medieval - UE
-- Commands & Colors: Samurai Battles - UE
+- Commands & Colors: Napoleonics UE
+- Commands & Colors: Ancients UE
+- Commands & Colors: Medieval UE
+- Commands & Colors: Samurai Battles UE
 
 **[Report a problem](../../issues/new/choose)**: pick your module's form. If the module itself hits an error, its
 **Report** button opens the right form with the details filled in. Please attach the game log the module names: it

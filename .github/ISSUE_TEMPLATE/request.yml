@@ -7,10 +7,10 @@ body:
     attributes:
       label: Module
       options:
-        - Commands & Colors: Napoleonics - UE
-        - Commands & Colors: Ancients - UE
-        - Commands & Colors: Medieval - UE
-        - Commands & Colors: Samurai Battles - UE
+        - Commands & Colors: Napoleonics UE
+        - Commands & Colors: Ancients UE
+        - Commands & Colors: Medieval UE
+        - Commands & Colors: Samurai Battles UE
     validations:
       required: true
   - type: textarea
@@ -20,3 +20,13 @@ body:
       description: For a rules point, quote the rule book, card or FAQ, and attach a game log or save showing it.
     validations:
       required: true
+  - type: textarea
+    id: files
+    attributes:
+      label: Files
+      description: "A saved game, log (inside a .zip) or screenshots that show the point, if any."
+  - type: textarea
+    id: environment
+    attributes:
+      label: Module, VASSAL and computer
+      description: Filled in by the module's Report an issue (GitHub)… menu item.
