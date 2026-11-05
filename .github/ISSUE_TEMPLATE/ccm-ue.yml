@@ -46,3 +46,9 @@ body:
       label: Error details
       description: Filled in by the Report button.
       render: text
+  - type: textarea
+    id: debug
+    attributes:
+      label: Debug details
+      description: "Filled in by Help › Report an issue (GitHub)… where the module offers it; for a long game, paste them from the clipboard (they are copied there for you). They hold every action of the game, so it can be replayed exactly."
+      render: text
