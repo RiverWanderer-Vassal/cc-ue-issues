@@ -26,6 +26,9 @@ repositories: [ccnapoleonics](https://github.com/RiverWanderer-Vassal/ccnapoleon
    [vassalengine/vassal](https://github.com/vassalengine/vassal/issues) with a minimal example, and linked here.
 4. **not-a-bug** / **duplicate**: works as the rules say, or already reported (linked).
 
+## Training the computer opponent
+Playing against the computer with **Training mode** ticked, you can comment on its moves; **Send training report…** then opens the *Training report* form here with your comments filled in. These carry the label **training** and stay apart from bug reports: each comment is replayed in the exact position and becomes a test the computer must pass (**to-review** → **case-added** → **bot-fixed**; **disagree** when we think its move stands, **data-only** when there is nothing to fix). A training report holds no player names and no chat; sending one makes that game public training data.
+
 Rules questions and requests use the *Rules question or request* form. Please quote the rule book, card or FAQ.
 
 A report without the game files gets the **needs-files** label and a note asking for them; the label comes off by
