@@ -36,10 +36,21 @@ jobs:
             }
             if (labels.includes("needs-files") || context.payload.action !== "opened") return;   // ask once, on opening
             await github.rest.issues.addLabels({ ...req, labels: ["needs-files"] });
+            if (labels.includes("via-relay")) {
+              // Sent through the report service, without a GitHub account: the reporter can't add files here.
+              await github.rest.issues.addLabels({ ...req, labels: ["needs-files"] });
+              await github.rest.issues.createComment({ ...req, body: [
+                "Thanks for the report. It came through the report service without a GitHub account, and with no game file.",
+                "",
+                "Reporter: in the module, **Help › Report an issue…** sends the report with its game files. If you left an",
+                "email address, we may write to you about this one. The *needs-files* label comes off once a file is linked here."
+              ].join("\n") });
+              return;
+            }
             await github.rest.issues.createComment({ ...req, body: [
               "Thanks for the report. There's no game file attached yet, and it's usually what finds the fault.",
               "",
-              "In the module, **Help › Report an issue (GitHub)…** prepares the files and opens their folder. Please drag the",
+              "In the module, **Help › Report an issue…** prepares the files and opens their folder. Please drag the",
               "`… game files.zip` (game log and saved game) into a comment here, with any screenshots. If you saved the game",
               "yourself, zip the `.vlog`/`.vsav` first: GitHub doesn't accept those file types on their own.",
               "",
