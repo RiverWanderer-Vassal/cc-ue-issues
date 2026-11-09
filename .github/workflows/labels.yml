@@ -22,6 +22,8 @@ jobs:
           gh label create "bug" --color "d73a4a" --description "Something is not working" --force
           gh label create "request" --color "a2eeef" --description "Rules question, feature or change request" --force
           gh label create "needs-triage" --color "fbca04" --description "New: not yet looked at" --force
+          gh label create "contact-email" --color "d4c5f9" --description "The reporter left an email, held privately by the report service" --force
+          gh label create "via-relay" --color "bfd4f2" --description "Sent through the report service, without a GitHub account" --force
           gh label create "needs-files" --color "f9d0c4" --description "Waiting for the game files (log and saved game)" --force
           gh label create "training" --color "0052cc" --description "A player's comments on the computer opponent (training report)" --force
           gh label create "to-review" --color "fbca04" --description "New training report" --force
