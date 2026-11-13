@@ -1,0 +1,57 @@
+name: "Submit a scenario"
+description: "A Community scenario for one of the UE modules: your own design, or one you have the designer's permission to share."
+title: "[Scenario] "
+labels: ["scenario", "community", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for sharing a scenario. Submitted scenarios are reviewed, and if accepted they are added to the module as
+        **Community** scenarios, credited to their designer. Please don't paste text from published GMT scenario booklets:
+        describe the scenario in your own words.
+  - type: input
+    id: module
+    attributes:
+      label: Module
+      description: Filled in by the module's Help menu.
+      placeholder: "e.g. Commands & Colors: Napoleonics UE"
+    validations:
+      required: true
+  - type: input
+    id: name
+    attributes:
+      label: Scenario name, battle and date
+      placeholder: e.g. Talavera (Ruffin's Attack) - 28 July 1809
+    validations:
+      required: true
+  - type: input
+    id: designer
+    attributes:
+      label: Designer
+      description: How the designer is to be credited.
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Historical notes, victory conditions and special rules
+      description: In your own words. Sources you used are welcome.
+    validations:
+      required: true
+  - type: textarea
+    id: files
+    attributes:
+      label: Files
+      description: "Drag in the scenario: a scenario file from the module (inside a .zip), a saved game set up as the scenario, or a map image. Filled in by the module with where your scenario files are."
+  - type: checkboxes
+    id: permission
+    attributes:
+      label: Permission
+      options:
+        - label: I designed this scenario, or the designer has agreed to it being shared and credited in the module.
+          required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Module, VASSAL and computer
+      description: Filled in by the module's Help menu.

@@ -1,0 +1,64 @@
+name: "Submit a variation"
+description: "A rules variation (a Community optional rule or army variant) for one of the UE modules to offer."
+title: "[Variation] "
+labels: ["variation", "community", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Variations are optional rules a player chooses before a game. If accepted, they are offered in the module as
+        **Community** options, labelled as such, credited to their designer, and never changing the official rules.
+  - type: input
+    id: module
+    attributes:
+      label: Module
+      description: Filled in by the module's Help menu.
+    validations:
+      required: true
+  - type: input
+    id: name
+    attributes:
+      label: Name of the variation
+    validations:
+      required: true
+  - type: input
+    id: designer
+    attributes:
+      label: Designer
+      description: How the designer is to be credited.
+    validations:
+      required: true
+  - type: textarea
+    id: rules
+    attributes:
+      label: The rules
+      description: Exactly what changes, in your own words, with an example of play if it helps.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Where it applies
+      description: All scenarios, some scenarios, an army or nation, a game format (standard, Epic, Grand Battles)…
+  - type: textarea
+    id: playtesting
+    attributes:
+      label: Play-testing
+      description: How much it has been played, and anything learned.
+  - type: textarea
+    id: files
+    attributes:
+      label: Files
+      description: Any rules sheet, player aid or game logs (inside a .zip).
+  - type: checkboxes
+    id: permission
+    attributes:
+      label: Permission
+      options:
+        - label: I designed this variation, or the designer has agreed to it being shared and credited in the module.
+          required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Module, VASSAL and computer
+      description: Filled in by the module's Help menu.

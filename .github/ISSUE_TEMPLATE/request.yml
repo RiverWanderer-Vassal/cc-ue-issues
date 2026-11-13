@@ -1,5 +1,5 @@
-name: Rules question or request
-description: A rule you think the module plays wrongly, or something you would like added or changed.
+name: Rules question
+description: A rule you think a module plays wrongly. For something to add or change, use "Request a feature".
 labels: ["request", "needs-triage"]
 body:
   - type: dropdown

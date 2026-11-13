@@ -26,7 +26,12 @@ repositories: [ccnapoleonics](https://github.com/RiverWanderer-Vassal/ccnapoleon
    [vassalengine/vassal](https://github.com/vassalengine/vassal/issues) with a minimal example, and linked here.
 4. **not-a-bug** / **duplicate**: works as the rules say, or already reported (linked).
 
-Rules questions and requests use the *Rules question or request* form. Please quote the rule book, card or FAQ.
+Rules questions use the *Rules question* form. Please quote the rule book, card or FAQ.
+
+Three more forms, also opened from each module's Help menu (piloted in CCN UE first):
+- **Submit a scenario**: a Community scenario, your own or shared with the designer's permission, credited to its designer.
+- **Submit a variation**: a Community optional rule or army variant, offered as a labelled option.
+- **Request a feature**: something you would like a module to do, or do differently.
 
 A report without the game files gets the **needs-files** label and a note asking for them; the label comes off by
 itself once a file is attached.
