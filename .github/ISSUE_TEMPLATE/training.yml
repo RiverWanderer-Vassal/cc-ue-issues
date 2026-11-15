@@ -2,6 +2,7 @@ name: "Training report: the computer opponent"
 description: "Your comments on the computer's moves in a UE module game. The module's Send training report button fills most of this in for you."
 title: "[Training] "
 labels: ["training", "to-review"]
+type: Task
 body:
   - type: markdown
     attributes:
